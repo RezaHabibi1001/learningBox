@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Category {
+  id: ID!
+  title: String!
+  content: String!
+}
+
+type Query {
+  healthCheck: String!
+  getCategories: [Category!]!
+  getCategory(id: String!): Category!
+}
+
+type Mutation {
+  createCategory(data: CreateCategoryInput!): Category!
+  updateCategory(id: ID!, data: UpdateCategoryInput!): Category!
+  deleteCategory(id: String!): Category!
+}
+
+input CreateCategoryInput {
+  title: String!
+  content: String!
+}
+
+input UpdateCategoryInput {
+  title: String
+  content: String
+}
